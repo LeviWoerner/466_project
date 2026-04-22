@@ -1,0 +1,135 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}
+
+header {
+  margin: -11px;
+  padding: 0px 20px;
+  background-color: Tomato;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+header h1 {
+  margin-top: 15px;
+  margin-bottom: 4px;
+}
+
+header p {
+  margin-top: 4px;
+}
+
+nav {
+  padding: 0px 150px;
+  margin-right: 0px;
+  margin-left: 0px;      
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+
+}
+
+footer {
+  background-color: Tomato;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+footer a {
+  color: black;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+footer ul {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+  margin: 5px;
+  padding: 1px 15px;
+}
+
+.catalogue {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.card h3 {
+  margin: 10px 0 5px;
+}
+
+.card h4 {
+  font-weight: normal;
+  margin: 10px 0 5px;
+}
+
+.card .description {
+  color: gray;
+}
+
+.add-to-cart {
+  background-color: tomato;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 8px;
+}
+
+.add-to-cart:hover {
+  background-color: orangered;
+}
+
+.price {
+  font-size: 1em;
+  font-weight: bold;
+  color: black;
+}
+
+.in-stock { color: green; }
+.low-stock { color: orange; }
+.out-of-stock { color: red; }
