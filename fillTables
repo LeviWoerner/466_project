@@ -1,137 +1,137 @@
 INSERT INTO Product
-(Name, Price, Stock)
+(Name, Description, Price, Stock)
 VALUES
-('Meatball', '10.00', '100');
+('Meatball', 'Our signature meatball recipe.', '10.00', '100');
 
 INSERT INTO Product
-(Name, Price, Stock)
+(Name, Description, Price, Stock)
 VALUES
-('Meatball(Chicken)', '9.50', '100');
+('Meatball(Bulk)', 'Our signature meatball recipe, but in bulk!', '120.00', '10');
 
 INSERT INTO Product
-(Name, Price, Stock)
+(Name, Description, Price, Stock)
 VALUES
-('Meatball(Pork)', '9.50', '100');
+('Meatball(Chicken)', 'Our signature meatball recipe, now made with 99% chicken! [We are not legally required to disclose the other 1%]', '9.50', '100');
 
 INSERT INTO Product
-(Name, Price, Stock)
+(Name, Description, Price, Stock)
 VALUES
-('Meatball(Vegan)', '15.00', '100');
+('Meatball(Pork)', 'Our signature meatball recipe, now made with 1% pork! [We are not legally required to disclose the other 99%]', '9.50', '100');
 
 INSERT INTO Product
-(Name, Price, Stock)
+(Name, Description, Price, Stock)
 VALUES
-('Meatball(Bulk)', '120.00', '10');
+('Meatball(Vegan)', 'A meatball perfect for those avoiding meat! (Meatball not included)', '15.00', '100');
 
 INSERT INTO Product
-(Name, Price, Stock)
+(Name, Description, Price, Stock)
 VALUES
-('Green Meatball', '11.50', '100');
+('Novelty Meatball', 'A meatball for those with distinguished taste.', '100.00', '10');
 
 INSERT INTO Product
-(Name, Price, Stock)
+(Name, Description, Price, Stock)
 VALUES
-('Purple Meatball', '11.50', '100');
+('Green Meatball', 'Our signature meatball recipe, but with [far more than] trace amounts of plutonium-232B!', '11.50', '100');
 
 INSERT INTO Product
-(Name, Price, Stock)
+(Name, Description, Price, Stock)
 VALUES
-('Suspicious Meatball', '4.99', '100');
+('Purple Meatball', 'Our signature meatball recipe, but purple!', '11.50', '100');
 
 INSERT INTO Product
-(Name, Price, Stock)
+(Name, Description, Price, Stock)
 VALUES
-('llabtaeM', '20.00', '100');
+('Suspicious Meatball', 'Perfect for spaghetti and faking wires.', '4.99', '100');
 
 INSERT INTO Product
-(Name, Price, Stock)
+(Name, Description, Price, Stock)
 VALUES
-('Ball-less Meatball', '5.00', '100');
+('llabtaeM', '.epicer llabtaem erutangis ruO', '20.00', '100');
 
 INSERT INTO Product
-(Name, Price, Stock)
+(Name, Description, Price, Stock)
 VALUES
-('Ball', '15.99', '100');
+('Ball-less Meatball', 'Our signature... meat... recipe?', '5.00', '100');
 
 INSERT INTO Product
-(Name, Price, Stock)
+(Name, Description, Price, Stock)
 VALUES
-('Meat', '15.99', '100');
+('Ball', 'I think we lost the plot...', '14.51', '100');
 
 INSERT INTO Product
-(Name, Price, Stock)
+(Name, Description, Price, Stock)
 VALUES
-('Novelty Meatball', '100.00', '10');
+('Meat', 'Not our signature meatball recipe.', '15.99', '100');
 
 INSERT INTO Product
-(Name, Price, Stock)
+(Name, Description, Price, Stock)
 VALUES
-('Giant Meatball', '90.00', '100');
+('Giant Meatball', 'Our signature meatball recipe, but much bigger! [NOT TO SCALE]', '90.00', '100');
 
 INSERT INTO Product
-(Name, Price, Stock)
+(Name, Description, Price, Stock)
 VALUES
-('Miniature Meatball', '1.00', '100');
+('Miniature Meatball', 'Our signature meatball recipe, but smaller! [TO SCALE]', '1.00', '100');
 
 INSERT INTO Product
-(Name, Price, Stock)
+(Name, Description, Price, Stock)
 VALUES
-('Festive Meatball', '15.00', '100');
+('Festive Meatball', 'Hasn\'t quite figured out when Christmas is.', '15.00', '100');
 
 INSERT INTO Product
-(Name, Price, Stock)
+(Name, Description, Price, Stock)
 VALUES
-('Radiant Meatball', '25.00', '25');
+('Radiant Meatball', '"Shine bright like a meatball" - Rihanna', '25.00', '25');
 
 INSERT INTO Product
-(Name, Price, Stock)
+(Name, Description, Price, Stock)
 VALUES
-('Meatcube', '13.31', '100');
+('Meatcube', 'They said be there or be square, and he didn\'t show up!', '13.31', '100');
 
 INSERT INTO Product
-(Name, Price, Stock)
+(Name, Description, Price, Stock)
 VALUES
-('Vintage Meatball', '11.00', '50');
+('Vintage Meatball', 'Studied under Charlie Chaplin.', '11.00', '50');
 
 INSERT INTO Product
-(Name, Price, Stock)
+(Name, Description, Price, Stock)
 VALUES
-('Flying Meatball', '10.01', '100');
+('Flying Meatball', 'Watch it go!', '10.01', '100');
 
 INSERT INTO Product
-(Name, Price, Stock)
+(Name, Description, Price, Stock)
 VALUES
-('The One Piece', '999.99', '0');
+('The One Piece', 'This isn\'t even a meatball..?', '999.99', '0');
 
 INSERT INTO Product
-(Name, Price, Stock)
+(Name, Description, Price, Stock)
 VALUES
-('the two piece', '20.00', '50');
+('the two piece', 'Two meatballs for double the price of one!', '20.00', '50');
 
 INSERT INTO Customer
-(Name, Email)
+(Name, Email, Password)
 VALUES
-('John', 'john@john.john');
+('John', 'john@john.john', 'john');
 
 INSERT INTO Customer
-(Name, Email)
+(Name, Email, Password)
 VALUES
-('Dalinar Kholin', '2@gmail.com');
+('Dalinar Kholin', '2@gmail.com', '2');
 
 INSERT INTO Customer
-(Name, Email)
+(Name, Email, Password)
 VALUES
-('Ri Shin', '3@gmail.com');
+('Ri Shin', '3@gmail.com', '3');
 
 INSERT INTO Customer
-(Name, Email)
+(Name, Email, Password)
 VALUES
-('Monkey D. Luffy', '4@gmail.com');
+('Monkey D. Luffy', '4@gmail.com', '4');
 
 INSERT INTO Customer
-(Name, Email)
+(Name, Email, Password)
 VALUES
-('Frieren', '5@aol.com');
+('Frieren', '5@aol.com', '5');
 
 INSERT INTO Orders
 (UserID, Status, ShippingAddr, BillingInfo)
@@ -182,4 +182,7 @@ INSERT INTO OrderItem
 (OrderID, ProductID, Quantity)
 VALUES
 ('5','17','1');
+
+
+
 
