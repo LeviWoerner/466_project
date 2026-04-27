@@ -4,9 +4,7 @@ require '../db_connect.php';
 // TEMPORARY: assume user is 1
 $userID = 1;
 
-// =========================
-// REMOVE ITEM
-// =========================
+// Remove Item
 if(isset($_POST['remove'])){
     $pdo->prepare("DELETE FROM CartItem WHERE CartID=? AND ProductID=?")
         ->execute([$_POST['cart_id'], $_POST['product_id']]);
@@ -30,9 +28,9 @@ if(isset($_POST['remove'])){
         <ul>
           <!-- FIXED: must use .php -->
           <li><a href="home.php"><b>Home</b></a></li>
-          <li><a href="login.html"><b>Login</b></a></li>
+          <li><a href="login.php"><b>Login</b></a></li>
           <li><a href="cart.php"><b>Cart</b></a></li>
-          <li><a href="orders.php"><b>Orders</b></a></li>
+          <li><a href="order.php"><b>Orders</b></a></li>
         </ul>
       </nav>
     </header>
@@ -91,7 +89,7 @@ echo "<h2>Total: $$total</h2>";
 
     <footer>
       <ul>
-        <li><a href="empLogin.html"><b>Employee Login</b></a></li>
+        <li><a href="empLogin.php"><b>Employee Login</b></a></li>
       </ul>
     </footer>
   </body>
