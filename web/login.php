@@ -42,10 +42,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       </div>
       <nav>
         <ul>
-          <li><a href="home.html"><b>Home</b></a></li>
-          <li><a href="login.html"><b>Login</b></a></li>
-          <li><a href="cart.html"><b>Cart</b></a></li>
-          <li><a href="order.html"><b>Orders</b></a></li>
+          <li><a href="home.php"><b>Home</b></a></li>
+          <li><a href="login.php"><b>Login</b></a></li>
+          <li><a href="cart.php"><b>Cart</b></a></li>
+          <li><a href="order.php"><b>Orders</b></a></li>
         </ul>
       </nav>
     </header>
@@ -70,13 +70,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           </label>
         </div>
         <div class="container" style="background-color:#f1f1f1">
-          <button type="button" class="cancelbtn" onclick="window.location.href='home.html'">Cancel</button>
+          <button type="button" class="cancelbtn" onclick="window.location.href='home.php'">Cancel</button>
         </div>
       </form>
     </main>
     <footer>
       <ul>
-        <li><a href="empLogin.html"><b>Employee Login</b></a></li>
+        <li><a href="empLogin.php"><b>Employee Login</b></a></li>
       </ul>
     </footer>
   </body>
