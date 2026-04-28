@@ -88,7 +88,7 @@ if(!$hasItems){
 // Total
 if ($hasItems) {
     echo "<h2>Total: $$total</h2>";
-    echo "<a href='checkout.php><b>Proceed to Checkout</b></a><br><br>";
+    echo "<a href='checkout.php'><b>Proceed to Checkout</b></a><br><br>";
 }
 ?>
 
