@@ -29,27 +29,26 @@
       <div class="catalogue">
 	   <?php
 	   require '../db_connect.php';
-	   $counter = 1;
-	   $sql = "SELECT COUNT(*) FROM Product;";
-	   $result = $pdo->query($sql);
-	   $row = $result->fetch();
-	   $total = $row[0];
 	   $sql = "SELECT * FROM Product ORDER BY ProductID;";
 	   $result = $pdo->query($sql);
-	   while($counter <= $total){
-		   echo '<div class="card">'."\r\n";
-		   echo '<img src="../meatballs/meatball'.$counter.'.png" alt="'.$row['Name'].'">';
-		   $row = $result->fetch();
-		   echo '<h3>'.$row['Name'].'</h3>'."\r\n";
-		   echo '<h4 class="description">'.$row['Description'].'</h4>'."\r\n";
-		   echo '<p class="price">$'.$row['Price'].'</p>'."\r\n";
-		   echo '<button class="add-to-cart">Add to Cart</button>'."\r\n";
-		   echo '<p class="stock in-stock">Stock: '.$row['Stock'].'</p>'."\r\n";
-		   echo '</div>'."\r\n";
-		   $counter++;
-	   }
+           foreach ($result->fetchAll() as $index => $row) {
+             $imgNum = $index + 1;
+	     echo '<div class="card"
+               data-name="'.htmlspecialchars($row['Name']).'"
+               data-desc="'.htmlspecialchars($row['Description']).'"
+               data-price="'.htmlspecialchars($row['Price']).'"
+               data-stock="'.htmlspecialchars($row['Stock']).'"
+               data-img="../meatballs/meatball'.$imgNum.'.png"
+               style="cursor:pointer;">'."\r\n";
+             echo '<img src="../meatballs/meatball'.$imgNum.'.png" alt="'.htmlspecialchars($row['Name']).'">';
+             echo '<h3>'.htmlspecialchars($row['Name']).'</h3>'."\r\n";
+             echo '<h4 class="description">'.htmlspecialchars($row['Description']).'</h4>'."\r\n";
+             echo '<p class="price">$'.$row['Price'].'</p>'."\r\n";
+             echo '<button class="add-to-cart">Add to Cart</button>'."\r\n";
+             echo '<p class="stock in-stock">Stock: '.$row['Stock'].'</p>'."\r\n";
+             echo '</div>'."\r\n";
+           }
 	   ?>
-	<!-- copy/paste to add more meatball cards... -->
       </div>
     </main>
     <footer>
@@ -59,5 +58,44 @@
         <li><a href="empOrder.php"><b>Order Fulfillment</b></a></li>
       </ul>
     </footer>
+
+    <!-- Individual Meatball Popup elements -->
+    <div id="modal-overlay" style="display:none;">
+      <div id="modal-content">
+        <button id="modal-close">✕</button>
+        <img id="modal-img" src="" alt="">
+        <h2 id="modal-name"></h2>
+        <p id="modal-desc"></p>
+        <p id="modal-price"></p>
+        <button class="add-to-cart">Add to Cart</button>
+        <p id="modal-stock"></p>
+     </div>
+    </div>
+
+    <!-- JavaScript for popup functionality -->
+    <script>
+      document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('click', function(e) {
+            if (e.target.classList.contains('add-to-cart')) return;
+
+            document.getElementById('modal-img').src = this.dataset.img;
+            document.getElementById('modal-name').textContent = this.dataset.name;
+            document.getElementById('modal-desc').textContent = this.dataset.desc;
+            document.getElementById('modal-price').textContent = '$' + this.dataset.price;
+            document.getElementById('modal-stock').textContent = 'Stock: ' + this.dataset.stock;
+            document.getElementById('modal-overlay').style.display = 'flex';
+        });
+      });
+
+      // Close on X button or clicking outside the modal
+      document.getElementById('modal-close').addEventListener('click', closeModal);
+      document.getElementById('modal-overlay').addEventListener('click', function(e) {
+        if (e.target === this) closeModal();
+      });
+
+      function closeModal() {
+        document.getElementById('modal-overlay').style.display = 'none';
+      }
+    </script>
   </body>
 </html>
