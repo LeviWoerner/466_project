@@ -183,6 +183,28 @@ INSERT INTO OrderItem
 VALUES
 ('5','17','1');
 
+INSERT INTO Employee
+(Name, Password)
+VALUES
+('Dan', 'Dan');
 
+INSERT INTO Employee
+(Name, Password)
+VALUES
+('Ian', 'Ian');
 
+INSERT INTO Employee
+(Name, Password)
+VALUES
+('Levi', 'Levi');
+
+INSERT INTO Employee
+(Name, Password)
+VALUES
+('Ethan', 'Ethan');
+
+INSERT INTO Employee
+(Name, Password)
+VALUES
+('Matt', 'Matt');
 
