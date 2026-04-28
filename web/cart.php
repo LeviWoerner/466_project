@@ -1,16 +1,19 @@
 <?php
 require '../db_connect.php';
+session_start();
 
-// TEMPORARY: assume user is 1
-$userID = 1;
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit;
+}
 
-// Remove Item
+$userID = $_SESSION['user_id'];
+
 if(isset($_POST['remove'])){
     $pdo->prepare("DELETE FROM CartItem WHERE CartID=? AND ProductID=?")
         ->execute([$_POST['cart_id'], $_POST['product_id']]);
 }
 ?>
-<?php session_start(); ?>
 
 <!DOCTYPE html>
 <html>
@@ -83,12 +86,15 @@ if(!$hasItems){
 }
 
 // Total
-echo "<h2>Total: $$total</h2>";
+if ($hasItems) {
+    echo "<h2>Total: $$total</h2>";
+    echo "<a href='checkout.php><b>Proceed to Checkout</b></a><br><br>";
+}
 ?>
 
       <br>
       <a href="home.php">Continue Shopping</a><br><br>
-      <a href="checkout.php"><b>Proceed to Checkout</b></a>
+
 
     </main>
 
